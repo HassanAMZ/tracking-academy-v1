@@ -1,6 +1,6 @@
 The site has been uppgraded to Verson 3, due to Nextjs13 Update: [repo link](https://github.com/HassanAMZ/trackingacademy-v1)
 
-## Shahzada Ali Hassan
+## Tracking Academy
 
 [email](mailto:trackingacademy@gmail.com)
 

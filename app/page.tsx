@@ -229,7 +229,7 @@ const Page: React.FC = () => {
    <ContainerLayout>
     <section className='py-5 sm:py-10 flex flex-col sm:items-center gap-2 sm:text-center backgroundOverlay  p-2'>
      <h3 className='text-2xl font-medium pb-2 '>
-      Meet Shahzada Ali Hassan, Your Web Analytics and Tracking Expert
+      Meet Tracking Academy, Your Web Analytics and Tracking Expert
      </h3>
      <div>
       <Divider />

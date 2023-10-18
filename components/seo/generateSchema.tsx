@@ -17,12 +17,12 @@ function generateSchema(metadata: PostMetadataProps["metadata"]) {
   ],
   author: {
    "@type": "Person",
-   name: "Shahzada Ali Hassan",
+   name: "Tracking Academy",
    url: "https://trackingacademy.com/about-us",
   },
   publisher: {
    "@type": "Organization",
-   name: "Shahzada Ali Hassan",
+   name: "Tracking Academy",
    logo: {
     "@type": "ImageObject",
     url: "https://trackingacademy.com/static/images/avatar.png",
