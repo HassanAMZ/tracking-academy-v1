@@ -1,0 +1,102 @@
+html {
+ scroll-behavior: smooth;
+}
+
+:root {
+ font-size: 16px;
+}
+
+@media (min-width: 640px) {
+ :root {
+  font-size: 17px;
+ }
+}
+
+@media (min-width: 768px) {
+ :root {
+  font-size: 18px;
+ }
+}
+
+@media (min-width: 1024px) {
+ :root {
+  font-size: 20px;
+ }
+}
+// Styles for making a YouTube video embed responsive
+.video-responsive {
+ overflow: hidden;
+ padding-bottom: 56.25%; // For 16:9 aspect ratio
+ position: relative;
+ height: 0; // Reset height
+}
+
+.video-responsive iframe {
+ left: 0; // Position to the left
+ top: 0; // Position to the top
+ height: 100%; // Full height
+ width: 100%; // Full width
+ position: absolute; // Absolute positioning within .video-responsive
+}
+
+// Style for the scrollbar in Firefox
+* {
+ scrollbar-width: thin; // Set scrollbar width
+ scrollbar-color: teal; // Set scrollbar color
+}
+
+// Styles for the scrollbar in Chrome, Edge, and Safari
+*::-webkit-scrollbar {
+ width: 6px; // Set scrollbar width
+}
+
+*::-webkit-scrollbar-track {
+ background: rgba(201, 76, 76, 0); // Set scrollbar track background color
+}
+
+*::-webkit-scrollbar-thumb {
+ background-color: teal; // Set scrollbar thumb color
+ border-radius: 0px; // Set scrollbar thumb border radius
+}
+
+@keyframes moving1 {
+ 0% {
+  transform: translateX(0);
+ }
+ 50% {
+  transform: translateX(-20px);
+ }
+ 100% {
+  transform: translateX(0);
+ }
+}
+
+// Background animation style for the gray-50 pulsating thing
+@keyframes moving2 {
+ 0% {
+  transform: translateX(0);
+ }
+ 50% {
+  transform: translateX(20px);
+ }
+ 100% {
+  transform: translateX(0);
+ }
+}
+
+.animate-moving1 {
+ animation: moving1 5s infinite;
+}
+
+.animate-moving2 {
+ animation: moving2 5s infinite;
+}
+// Background animation style for the gray-50 pulsating thing end
+
+// hero section text color
+.animate-text {
+ animation: text 5s ease infinite;
+ background: linear-gradient(to right, #f56565, #9f7aea, #667eea);
+ background-clip: text;
+ color: transparent;
+}
