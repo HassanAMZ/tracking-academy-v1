@@ -205,7 +205,7 @@ export default function Page() {
     headingTexts={{
      heading: "What do I know about freelancing? 🙌",
      subHeading:
-      "Hey, I'm Peter, and I have been teaching the business of freelancing for 10+ years.",
+      "Hey, I'm Hassan, and I have been teaching the business of freelancing for 10+ years.",
     }}
     colorDetails={{ primary: baseColors.forBusinesses.primary }}
    />
@@ -233,7 +233,7 @@ export default function Page() {
     <TestimonialCard
      person={{
       testimonial:
-       "Peter was shining a light on questions I never even asked myself!",
+       "Hassan was shining a light on questions I never even asked myself!",
       position: "Freelance Journalist",
       name: "Clarissa Jurumenha",
       image: {
@@ -247,7 +247,7 @@ export default function Page() {
     <TestimonialCard
      person={{
       testimonial:
-       "Peter was shining a light on questions I never even asked myself!",
+       "Hassan was shining a light on questions I never even asked myself!",
       position: "Freelance Journalist",
       name: "Clarissa Jurumenha",
       image: {
@@ -261,7 +261,7 @@ export default function Page() {
     <TestimonialCard
      person={{
       testimonial:
-       "Peter was shining a light on questions I never even asked myself!",
+       "Hassan was shining a light on questions I never even asked myself!",
       position: "Freelance Journalist",
       name: "Clarissa Jurumenha",
       image: {
@@ -275,7 +275,7 @@ export default function Page() {
     <TestimonialCard
      person={{
       testimonial:
-       "Peter was shining a light on questions I never even asked myself!",
+       "Hassan was shining a light on questions I never even asked myself!",
       position: "Freelance Journalist",
       name: "Clarissa Jurumenha",
       image: {
@@ -289,7 +289,7 @@ export default function Page() {
     <TestimonialCard
      person={{
       testimonial:
-       "Peter was shining a light on questions I never even asked myself!",
+       "Hassan was shining a light on questions I never even asked myself!",
       position: "Freelance Journalist",
       name: "Clarissa Jurumenha",
       image: {
@@ -303,7 +303,7 @@ export default function Page() {
     <TestimonialCard
      person={{
       testimonial:
-       "Peter was shining a light on questions I never even asked myself!",
+       "Hassan was shining a light on questions I never even asked myself!",
       position: "Freelance Journalist",
       name: "Clarissa Jurumenha",
       image: {

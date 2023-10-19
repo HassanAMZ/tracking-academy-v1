@@ -7,7 +7,7 @@ import { Headingxl } from "@/components/typography/Heading";
 const BlogContent: React.FC<BlogContentProps> = ({ data, type, rawData }) => {
  const [visiblePosts, setVisiblePosts] = useState(9); // Display first 9 posts by default
 
- const mainBlogPost = rawData?.find((blog) => blog.blogId === "00057")!;
+ const mainBlogPost = rawData?.find((blog) => blog.blogId === "00001")!;
  const visibleBlogLinks = data.slice(0, visiblePosts).map((post, index) => (
   <React.Fragment key={index}>
    <SingleBlogCard post={post} type={type} />
@@ -21,7 +21,7 @@ const BlogContent: React.FC<BlogContentProps> = ({ data, type, rawData }) => {
  return (
   <React.Fragment>
    <SingleBlogCard isMain={true} post={mainBlogPost} type={"blog"} />
-   <div className='grid sm:grid-cols-2 md:grid-cols-3 grid-cols-1 gap-2'>
+   <div className='grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-2'>
     {visibleBlogLinks}
    </div>
    {visiblePosts < data.length && (

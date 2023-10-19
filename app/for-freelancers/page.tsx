@@ -130,7 +130,7 @@ export default function Page() {
       icon: "🖼",
       header: "Structured Approach",
       details:
-       "Gain an overview of your progress with the structured Freelancing Pizza Canvas.",
+       "Gain an overview of your progress with the structured Freelancing Canvas.",
      },
     ]}
     primaryLink={{ src: "#", text: "Enroll Here" }}
@@ -175,11 +175,11 @@ export default function Page() {
     }}
     colorDetails={{ primary: baseColors.forFreelancers.primary }}
    />
-   <div className='grid md:grid-cols-3 grid-cols-1'>
+   <div className='grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1'>
     <TestimonialCard
      person={{
       testimonial:
-       "Peter was shining a light on questions I never even asked myself!",
+       "Hassan was shining a light on questions I never even asked myself!",
       position: "Freelance Journalist",
       name: "Clarissa Jurumenha",
       image: {
@@ -193,7 +193,7 @@ export default function Page() {
     <TestimonialCard
      person={{
       testimonial:
-       "Peter was shining a light on questions I never even asked myself!",
+       "Hassan was shining a light on questions I never even asked myself!",
       position: "Freelance Journalist",
       name: "Clarissa Jurumenha",
       image: {
@@ -207,7 +207,7 @@ export default function Page() {
     <TestimonialCard
      person={{
       testimonial:
-       "Peter was shining a light on questions I never even asked myself!",
+       "Hassan was shining a light on questions I never even asked myself!",
       position: "Freelance Journalist",
       name: "Clarissa Jurumenha",
       image: {
@@ -221,7 +221,7 @@ export default function Page() {
     <TestimonialCard
      person={{
       testimonial:
-       "Peter was shining a light on questions I never even asked myself!",
+       "Hassan was shining a light on questions I never even asked myself!",
       position: "Freelance Journalist",
       name: "Clarissa Jurumenha",
       image: {
@@ -235,7 +235,7 @@ export default function Page() {
     <TestimonialCard
      person={{
       testimonial:
-       "Peter was shining a light on questions I never even asked myself!",
+       "Hassan was shining a light on questions I never even asked myself!",
       position: "Freelance Journalist",
       name: "Clarissa Jurumenha",
       image: {
@@ -249,7 +249,7 @@ export default function Page() {
     <TestimonialCard
      person={{
       testimonial:
-       "Peter was shining a light on questions I never even asked myself!",
+       "Hassan was shining a light on questions I never even asked myself!",
       position: "Freelance Journalist",
       name: "Clarissa Jurumenha",
       image: {
@@ -268,7 +268,7 @@ export default function Page() {
     className='!py-8'
     person={{
      testimonial:
-      "Peter was shining a light on questions I never even asked myself!",
+      "Hassan was shining a light on questions I never even asked myself!",
      position: "Freelance Journalist",
      name: "Clarissa Jurumenha",
      image: {
@@ -278,21 +278,21 @@ export default function Page() {
       height: 1080,
      },
     }}
-   />{" "}
+   />
    <WhyUs
     headingTexts={{
-     heading: "Why pizza? 🍕",
+     heading: "Why Web Analytics? 📊",
     }}
     paragraphTexts={{
-     primary: "Because freelancing is like pizza, ",
+     primary: "Because digital understanding is like a map,",
      secondary:
-      "the dough, as in the business fundamentals are the same—but everybody gets to pick their own toppings!",
+      "the foundational tools like GA4, Tag Manager, and web tracking are the land and terrain—but how you navigate and understand them defines your journey's success!",
     }}
     colorDetails={{
-     primary: baseColors.forFreelancers.primary,
+     primary: baseColors.home.primary,
     }}
     links={{
-     primary: { src: "/#start-here", text: "Get Started with Freelancing!" },
+     primary: { src: "/#courses", text: "Explore Our Courses!" },
     }}
    />
   </React.Fragment>

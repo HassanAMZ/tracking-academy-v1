@@ -139,7 +139,7 @@ const Page: React.FC = () => {
     className='!py-8'
     person={{
      testimonial:
-      "Peter was shining a light on questions I never even asked myself!",
+      "Hassan was shining a light on questions I never even asked myself!",
      position: "Freelance Journalist",
      name: "Clarissa Jurumenha",
      image: {
@@ -153,20 +153,21 @@ const Page: React.FC = () => {
 
    <WhyUs
     headingTexts={{
-     heading: "Why pizza? 🍕",
+     heading: "Why Web Analytics? 📊",
     }}
     paragraphTexts={{
-     primary: "Because freelancing is like pizza, ",
+     primary: "Because digital understanding is like a map,",
      secondary:
-      "the dough, as in the business fundamentals are the same—but everybody gets to pick their own toppings!",
+      "the foundational tools like GA4, Tag Manager, and web tracking are the land and terrain—but how you navigate and understand them defines your journey's success!",
     }}
     colorDetails={{
      primary: baseColors.home.primary,
     }}
     links={{
-     primary: { src: "/#start-here", text: "Get Started with Freelancing!" },
+     primary: { src: "/#courses", text: "Explore Our Courses!" },
     }}
    />
+
    {/* <ContainerLayout className='pb-4'>
     <CustomHeader text='Recent Web Analytics & Tracking Projects' />
     <RecentClientSlider />
