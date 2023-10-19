@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { UserAuth } from "@/context/AuthContext";
 
 export const metadata = {
- title: "Tags Archieve- ShahzadaAliHassan",
+ title: "Tags Archieve- TrackingAcamdey",
  description: `Blog for Web Analysts and Marketing People`,
  openGraph: {
   images: ["/images/social-sharing.png"],

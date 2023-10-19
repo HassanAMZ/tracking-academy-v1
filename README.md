@@ -8,9 +8,9 @@ The site has been uppgraded to Verson 3, due to Nextjs13 Update: [repo link](htt
 
 [twitter](https://twitter.com/shahzadaalihas4)
 
-[facebook](https://facebook.com/Shahzadaalihassan)
+[facebook](https://facebook.com/TrackingAcamdey)
 
-[instagram](https://instagram.com/Shahzadaalihassanblog)
+[instagram](https://instagram.com/TrackingAcamdeyblog)
 
 [Linkedin](https://www.linkedin.com/in/hassanamz)
 

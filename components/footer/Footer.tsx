@@ -9,13 +9,13 @@ const Footer: React.FC = () => {
    <footer className='backgroundOverlay md:px-20 md:py-16 py-12 px-5 flex  md:gap-5 gap-2  justify-between'>
     <div className='flex justify-between flex-col'>
      <div>
-      <NavLink href='/'>ShahzadaAliHassan</NavLink>
+      <NavLink href='/'>TrackingAcamdey</NavLink>
       <Paragraphmd className='textOpacity80 py-2'>
        The ultimate educational journey for freelancers.
       </Paragraphmd>
      </div>
      <Paragraphmd className='textOpacity80'>
-      © {new Date().getFullYear()} freelance.pizza, All rights reserved
+      © {new Date().getFullYear()} TrackingAcademy, All rights reserved
      </Paragraphmd>
     </div>
     <nav className='flex flex-col space-y-3 min-w-fit textOpacity80'>

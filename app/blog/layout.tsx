@@ -5,7 +5,7 @@ import { PostMetadata } from "@/types/index";
 import getBlogsData from "@/components/utils/getBlogsData";
 
 export const metadata = {
- title: "Blog Archieve- ShahzadaAliHassan",
+ title: "Blog Archieve- TrackingAcamdey",
  description: `Blog for Web Analysts and Marketing People`,
  openGraph: {
   images: ["/images/social-sharing.png"],
