@@ -32,9 +32,9 @@ export const FirebaseAuth = () => {
   <div className='backgroundOverlay p-2'>
    {loading ? null : !user ? (
     <div className='flex flex-col items-center gap-2  h-[50vh] justify-center'>
-     <p className='flex justify-center'>
-      You must be logged in to view this page
-     </p>
+     <div className='flex justify-center'>
+      <p>Sign in to view the full content.</p>
+     </div>
      <div className='flex flex-row items-center gap-2   justify-center'>
       <div class='px-6 sm:px-0 max-w-sm'>
        <button
@@ -60,11 +60,11 @@ export const FirebaseAuth = () => {
      </div>
     </div>
    ) : (
-    <div className='flex flex-col justify-center items-center h-[20vh] gap-2'>
-     <p>Welcome, {user.displayName}</p>
+    <div className='flex flex-row justify-center items-center h-[20vh] gap-2'>
+     <p>Welcome, {user.displayName}:</p>
 
      <button
-      className='rounded-md px-3.5 py-2.5 text-base font-medium shadow-md'
+      className='underline hover:font-semibold hover:cursor-pointer'
       onClick={handleSignOut}>
       Sign out
      </button>
