@@ -45,13 +45,13 @@ export const FirebaseAuth = () => {
      <div className='flex justify-center'>
       <Paragraphsm>Sign in to view the full content.</Paragraphsm>
      </div>
-     <div className='flex flex-row items-center gap-1 justify-center'>
+     <div className='flex flex-col sm:flex-row w-full sm:w-1/2 items-center gap-2 justify-center'>
       <button
        onClick={handleSignIn}
        type='button'
        className='text-white w-full bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none font-medium rounded-md text-base px-5 py-2.5 text-center inline-flex items-center justify-center '>
        <svg
-        class='mr-2 -ml-1 w-4 h-4'
+        className='mr-2 -ml-1 w-4 h-4'
         aria-hidden='true'
         focusable='false'
         data-prefix='fab'
@@ -65,7 +65,7 @@ export const FirebaseAuth = () => {
        </svg>
        <div> Google</div>
       </button>
-      <button
+      {/* <button
        onClick={handleFacebookSignIn} // New Facebook Sign In button
        type='button'
        className='text-white w-full bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none font-medium rounded-md text-base px-5 py-2.5 text-center inline-flex items-center justify-center '>
@@ -83,7 +83,7 @@ export const FirebaseAuth = () => {
          d='M279.14 288l14.22-92.66h-88.91v-59.63c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z'></path>
        </svg>
        <div> Facebook</div>
-      </button>
+      </button> */}
      </div>
     </div>
    ) : (
