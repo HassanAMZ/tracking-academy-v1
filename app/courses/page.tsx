@@ -30,7 +30,7 @@ export default async function Page() {
       welcomeText: "Tracking Academy Courses",
       heading: "Learn from technical marketing experts",
       subHeading: {
-       one: "With Simmer, ",
+       one: "With TrackingAcademy, ",
        two: "our courses are designed in task-based and bite-sized chunks so that you learn by doing. ",
       },
      }}

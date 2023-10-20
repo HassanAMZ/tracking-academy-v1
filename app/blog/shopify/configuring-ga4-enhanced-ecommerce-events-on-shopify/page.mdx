@@ -15,33 +15,32 @@ export const metadata = {
 
 ## Introduction
 
-In this blog, we are going to explore how you can configure Google
-Analytics 4 (GA4) for your Shopify store. By the end, you'll understand how to track
-e-commerce events like "view item", "add to cart", and "purchased" to gain insights
-into user behavior.
+In this blog, we are going to explore how you can configure Google Analytics 4 (GA4) for your Shopify store using native integration. By the end, you'll understand how to track e-commerce events like "view item", "add to cart", and "purchase" to gain insights into user behavior.
 
 <YoutubeEmbed embedId={metadata.embedId} />
 
 Google Analytics provides us invaluable insights into our store's performance and customer behavior without the need for deep technical knowledge. It's a must-have for Shopify store owners who aim to optimize their business operations.
 
-Fear not; our guide ensures a smooth and hassle-free experience, breaking down every step for you.
-
-Don't worry; we're keeping things simple and straightforward.
-
 ## Two Main Approaches to Shopify Analytics Setup
 
 There are two primary methods to achieve this:
 
-1. Utilizing Google's channel integrated with Shopify, providing a holistic solution to most tracking needs.
-2. A more custom and robust approach using Google Tag Manager's web and server containers.
+1. Utilizing Google's channel integrated with Shopify, providing a holistic solution to most tracking needs (this Blog).
+2. A more custom and robust approach using Google Tag Manager's web and server containers (will be covered in future blogs).
 
 In this guide, we'll focus on the first option, employing Google and YouTube sales channels for Shopify to monitor events on GA4.
 
 ## Advantages and Drawbacks of Google's Built-in Channel
 
-This process is fairly straightforward. However, one significant drawback is its inability to track all traffic. Estimates show tracking rates of around 60% to 90%. Factors like ad blockers, iOS's ITP restrictions, and EU data protection regulations hinder complete tracking.
+This process is fairly straightforward. However, one significant drawback is its inability to track all traffic. Estimates show tracking rates of around 60% to 90%. Factors like ad blockers, iOS's ITP restrictions, and EU data protection regulations hinder complete tracking.The native integration does not track the following events by default either:
 
-The alternative, shifting from Google's built-in channel to Google Tag Manager, demands more resources, but we'll tackle that in another blog.
+1. View Item List (view_item_list)
+2. View Cart (view_cart)
+3. Add Shipping Info (add_shipping_info)
+
+The first two missing events can be added via google tag manager, and the blogs can be found on the website. However, to improve the accuracy of tracking, shifting from Google's built-in channel to Google Tag Manager is the solution, demanding more resources (we'll tackle that in future blogs).
+
+There are also issues with Upsell Tracking that are discussed later in this blog.
 
 <Note
  title='Tips'
@@ -55,8 +54,6 @@ Before starting, ensure:
 1. You have a Shopify store.
 2. A Google Analytics 4 account is set up.
 
-[Skip ahead](timestamp_link) if you have both ready.
-
 ## Creating a Google Analytics 4 Account
 
 If you're new to GA4:
@@ -67,12 +64,11 @@ If you're new to GA4:
 
 ## Data Stream Setup
 
-A data stream is a conduit transporting data from Shopify to GA4. Here's how to set one up:
+A data stream is a pipeline transporting data from Shopify to GA4. Here's how to set one up:
 
 1. Under "Property" in GA4, select "Data Streams".
 2. Choose the appropriate stream type (web, for Shopify).
 3. Enter website details and create the stream.
-4. Make note of the provided "measurement ID"; you'll need it for installation.
 
 ## Integrating Google and YouTube Channels in Shopify
 
@@ -100,12 +96,12 @@ Perform actions like viewing items, adding to cart, and starting checkout. Then,
 
 <Note
  title='Note'
- content='Some events, like "view item list", might not be enabled by default.'
+ content='Some events, like "view_item_list", "view_cart" and "add_shipping_info", might not be enabled by default.'
 />
 
 ## Upsell Tracking
 
-If you utilize upsell tracking, ensure the integration captures upsell events correctly. Perform a test purchase and confirm that upsell-related events are being recorded in GA4.
+Another issue related to native integration is Upsell Tracking, the default channel, does not track the conversions made on the second upsell. GA4 only records the first conversion event that fires on the Purchase flow, it deduplicates every other purchase event since they all have the same transaction_id parameter. There is a solution, however that will be discussed in the later blogs. You can refer to this [**Upsell Tags Page**](/tags/upsell) in future, for updates.
 
 ## Conclusion
 

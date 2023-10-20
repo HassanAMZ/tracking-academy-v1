@@ -164,7 +164,7 @@ const Page: React.FC = () => {
      primary: baseColors.home.primary,
     }}
     links={{
-     primary: { src: "/#courses", text: "Explore Our Courses!" },
+     primary: { src: "/courses", text: "Explore Our Courses!" },
     }}
    />
 
