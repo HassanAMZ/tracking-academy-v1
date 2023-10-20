@@ -2,7 +2,9 @@ import React from "react";
 import LearnMore from "@/components/global/LearnMore";
 import LearnMoreHeader from "@/components/global/LearnMoreHeader";
 import baseColors from "@/data/base-colors";
+import Image from "next/image";
 import AboutDetails from "@/components/about/AboutDetails";
+import ContainerLayout from "@/components/layouts/ContainerLayout";
 export default function Page() {
  return (
   <section className=''>
@@ -15,6 +17,15 @@ export default function Page() {
      className='rounded-md'
     />
    </div> */}
+   <ContainerLayout className='pt-2'>
+    <Image
+     src='/images/social-sharing.png'
+     alt='Imtiaz Ahmed'
+     width={1920}
+     height={1080}
+     className='rounded-lg'
+    />
+   </ContainerLayout>
 
    <LearnMoreHeader
     headingTexts={{
