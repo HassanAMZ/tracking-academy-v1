@@ -35,20 +35,16 @@ const BlogCard: React.FC<SingleBlogCardProps> = ({
  );
  return (
   <React.Fragment>
-   {post.draft ? (
-    <React.Fragment />
-   ) : (
-    <div
-     className={` hover:border-2 hover:border-white rounded-md border-2 border-gray-700 shadow-md  ${
-      isMain ? "hidden md:flex" : ""
-     } ${className}`}>
-     <Link href={`/${type}/${post.slug}`} className=''>
-      <section className='grid backgroundOverlay h-full w-full'>
-       {renderContent()}
-      </section>
-     </Link>
-    </div>
-   )}
+   <div
+    className={` hover:border-2 hover:border-white rounded-md border-2 border-gray-700 shadow-md  ${
+     isMain ? "hidden md:flex" : ""
+    } ${className}`}>
+    <Link href={`/${type}/${post.slug}`} className=''>
+     <section className='grid backgroundOverlay h-full w-full'>
+      {renderContent()}
+     </section>
+    </Link>
+   </div>
   </React.Fragment>
  );
 };

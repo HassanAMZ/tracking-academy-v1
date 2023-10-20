@@ -69,7 +69,7 @@ const GTMBlogViewEvent: React.FC<GTMBlogViewProps> = ({ metadata }) => {
   });
  }, [metadata]);
 
- return <React.Fragment></React.Fragment>;
+ return null;
 };
 
 const GTMBlogListViewEvent: React.FC<GTMBlogListViewEventProps> = ({
@@ -90,7 +90,7 @@ const GTMBlogListViewEvent: React.FC<GTMBlogListViewEventProps> = ({
   });
  }, [blogList]);
 
- return <React.Fragment></React.Fragment>;
+ return null;
 };
 const GTMCourseListViewEvent: React.FC<GTMCourseListViewEventProps> = ({
  courseList,
@@ -110,12 +110,81 @@ const GTMCourseListViewEvent: React.FC<GTMCourseListViewEventProps> = ({
   });
  }, [courseList]);
 
- return <React.Fragment></React.Fragment>;
+ return null;
+};
+
+const GTMSignInFailedEvent: React.FC<{ error: any }> = ({ error }) => {
+ useEffect(() => {
+  initDataLayer();
+  window.dataLayer.push({
+   event: "gtm_custom_event",
+   datalayer_event_name: "signin_failed",
+   error_message: error,
+  });
+ }, [error]);
+
+ return null;
+};
+const GTMSignInSuccessEvent: React.FC<{ user: any }> = ({ user }) => {
+ useEffect(() => {
+  initDataLayer();
+  const userData = {
+   id: user.uid || undefined,
+   phone: user.providerData[0]?.phoneNumber || undefined,
+   email: user.email || undefined,
+   address: {
+    city: undefined, // Assuming address info is not available
+    state: undefined,
+    country: undefined,
+    postal_code: undefined,
+    first_name: user.displayName ? user.displayName.split(" ")[0] : undefined,
+    last_name: user.displayName ? user.displayName.split(" ")[1] : undefined,
+   },
+  };
+
+  window.dataLayer.push({
+   event: "gtm_custom_event",
+   datalayer_event_name: "signin_successful",
+   user_data: userData,
+  });
+ }, [user]);
+
+ return null;
+};
+
+const GTMSignOutEvent: React.FC<{ user: any }> = ({ user }) => {
+ useEffect(() => {
+  initDataLayer();
+
+  const userData = {
+   id: user.uid || undefined,
+   phone: user.providerData[0]?.phoneNumber || undefined,
+   email: user.email || undefined,
+   address: {
+    city: undefined, // Assuming address info is not available
+    state: undefined,
+    country: undefined,
+    postal_code: undefined,
+    first_name: user.displayName ? user.displayName.split(" ")[0] : undefined,
+    last_name: user.displayName ? user.displayName.split(" ")[1] : undefined,
+   },
+  };
+  window.dataLayer.push({
+   event: "gtm_custom_event",
+   datalayer_event_name: "signout",
+   user_data: userData,
+  });
+ }, []);
+
+ return null; // This component doesn't render anything
 };
 
 export {
  GTMBlogViewEvent,
  GTMBlogListViewEvent,
  GTMCalendlyEvent,
+ GTMSignOutEvent,
  GTMCourseListViewEvent,
+ GTMSignInFailedEvent,
+ GTMSignInSuccessEvent,
 };

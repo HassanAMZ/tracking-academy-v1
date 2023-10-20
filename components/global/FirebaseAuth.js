@@ -2,9 +2,14 @@
 import { UserAuth } from "@/context/AuthContext";
 import React, { useState, useEffect } from "react";
 import { Paragraphsm } from "@/components/typography/Heading";
+import {
+ GTMSignInFailedEvent,
+ GTMSignInSuccessEvent,
+ GTMSignOutEvent,
+} from "@/components/analytics/GTMEvents";
 
 export const FirebaseAuth = () => {
- const { user, googleSignIn, facebookSignIn, logOut } = UserAuth(); // Destructure facebookSignIn
+ const { user, googleSignIn, facebookSignIn, logOut } = UserAuth();
  const [loading, setLoading] = useState(true);
 
  const handleSignIn = async () => {
@@ -26,6 +31,7 @@ export const FirebaseAuth = () => {
 
  const handleSignOut = async () => {
   try {
+   <GTMSignOutEvent user={user} />;
    await logOut();
   } catch (error) {
    console.log("handleSignOut error from FirebaseAuth.js", error);
@@ -89,7 +95,6 @@ export const FirebaseAuth = () => {
    ) : (
     <div className='flex flex-row justify-center items-center h-[20vh] gap-2'>
      <p>Welcome, {user.displayName}:</p>
-
      <button
       className='underline hover:font-semibold hover:cursor-pointer'
       onClick={handleSignOut}>

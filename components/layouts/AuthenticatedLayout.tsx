@@ -31,7 +31,7 @@ const AuthenticatedLayout: React.FC<AuthenticatedLayoutProps> = ({
    ) : user ? (
     <div>
      <React.Fragment>{children}</React.Fragment>
-     <section className='pt-4'>
+     <section className='pt-2'>
       <FirebaseAuth />
      </section>
     </div>
