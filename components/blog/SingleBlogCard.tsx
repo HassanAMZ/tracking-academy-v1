@@ -1,5 +1,9 @@
 import React from "react";
-import { Heading3xl, Paragraphsm } from "@/components/typography/Heading";
+import {
+ Heading3xl,
+ Heading2xl,
+ Paragraphsm,
+} from "@/components/typography/Heading";
 import Link from "next/link";
 import generateDarkColor from "@/components/utils/generateDarkColor";
 import formatDate from "@/components/seo/formatDate";
@@ -13,8 +17,12 @@ const BlogCard: React.FC<SingleBlogCardProps> = ({
 }) => {
  const renderContent = () => (
   <>
-   <div className={`rounded-md bg-opacity-40 bg-gray-600 p-6`}>
-    <Heading3xl className='line-clamp-2 '>{post.title}</Heading3xl>
+   <div className={`backgroundOverlay p-6`}>
+    {isMain ? (
+     <Heading3xl className='line-clamp-2 py-2'>{post.title}</Heading3xl>
+    ) : (
+     <Heading2xl className='line-clamp-2 '>{post.title}</Heading2xl>
+    )}
    </div>
 
    <div className='textOpacity80 py-6 px-6 border-md'>
@@ -25,18 +33,24 @@ const BlogCard: React.FC<SingleBlogCardProps> = ({
    </div>
   </>
  );
-
+ console.log();
  return (
-  <div
-   className={` hover:border-2 hover:border-white rounded-md border-2 border-gray-700 shadow-md  ${
-    isMain ? "hidden md:flex" : ""
-   } ${className}`}>
-   <Link href={`/${type}/${post.slug}`} className=''>
-    <section className='grid backgroundOverlay h-full w-full'>
-     {renderContent()}
-    </section>
-   </Link>
-  </div>
+  <React.Fragment>
+   {post.draft ? (
+    <React.Fragment />
+   ) : (
+    <div
+     className={` hover:border-2 hover:border-white rounded-md border-2 border-gray-700 shadow-md  ${
+      isMain ? "hidden md:flex" : ""
+     } ${className}`}>
+     <Link href={`/${type}/${post.slug}`} className=''>
+      <section className='grid backgroundOverlay h-full w-full'>
+       {renderContent()}
+      </section>
+     </Link>
+    </div>
+   )}
+  </React.Fragment>
  );
 };
 

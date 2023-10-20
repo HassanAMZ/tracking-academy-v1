@@ -12,32 +12,32 @@ import CallToActionSections from "@/components/global/CallToActionSections";
 const Page: React.FC = () => {
  const clientData = [
   {
-   src: "/images/clients/logos/upwork.png",
-   alt: "Client 1",
-   width: 1920,
-   height: 1080,
-  },
-  {
    src: "/images/clients/logos/roastycoffee.png",
-   alt: "Client 2",
+   alt: "roastycoffee",
    width: 1920,
    height: 1080,
   },
   {
    src: "/images/clients/logos/shepherd.png",
-   alt: "Client 2",
+   alt: "shepherd",
+   width: 1920,
+   height: 1080,
+  },
+  {
+   src: "/images/clients/logos/upwork.png",
+   alt: "upwork",
    width: 1920,
    height: 1080,
   },
   {
    src: "/images/clients/logos/cmrd.png",
-   alt: "Client 1",
+   alt: "cmrd",
    width: 1920,
    height: 1080,
   },
   {
    src: "/images/clients/logos/enhanza.png",
-   alt: "Client 2",
+   alt: "enhanza",
    width: 1920,
    height: 1080,
   },
@@ -56,7 +56,7 @@ const Page: React.FC = () => {
     }}
     links={{
      primary: { src: "#learnMoreHeader", text: "Start Here" },
-     secondary: { src: "/contact", text: "Get In Touch" },
+     //  secondary: { src: "/courses", text: "Join Membership" },
     }}
     images={{
      group: {

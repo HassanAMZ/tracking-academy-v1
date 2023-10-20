@@ -1,4 +1,5 @@
 import Link from "next/link";
+import React from "react";
 
 type CustomLinkProps = {
  href?: string;
@@ -22,7 +23,7 @@ let CustomLink: React.FC<CustomLinkProps> = ({
  if (isInternalLink) {
   return (
    <Link href={href} className={classes}>
-    <div {...rest} />
+    <React.Fragment {...rest} />
    </Link>
   );
  }
