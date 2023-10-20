@@ -1,5 +1,6 @@
 const baseColors = {
  home: { primary: "rgba(0, 191, 255, 1)" },
+ courses: { primary: "rgba(218, 112, 214, 1)" },
  forFreelancers: { primary: "rgba(50, 210, 50, 1)" },
  forBusinesses: { primary: "rgba(0, 191, 255, 1)" },
  service: { primary: "rgba(255,87,51,1)" },

@@ -1,4 +1,4 @@
-export default function extractMetaFromString(content: string): any {
+export default function extractMetaFromStringForBlog(content: string): any {
  // Extract the meta string from the content
  const metaStringMatch = content.match(
   /export const metadata = (\{[\s\S]*?\});/

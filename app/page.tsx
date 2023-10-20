@@ -56,7 +56,7 @@ const Page: React.FC = () => {
     }}
     links={{
      primary: { src: "#learnMoreHeader", text: "Start Here" },
-     //  secondary: { src: "/courses", text: "Join Membership" },
+     secondary: { src: "/courses", text: "Join Membership" },
     }}
     images={{
      group: {

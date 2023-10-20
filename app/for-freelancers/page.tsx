@@ -59,7 +59,7 @@ export default function Page() {
    <TwoGridContent
     imagesData={{
      alt: "temp",
-     src: "/images/hero/temp_img.png",
+     src: "/images/hero/001.png",
      width: 863,
      height: 1163,
     }}
@@ -108,7 +108,7 @@ export default function Page() {
    <TwoGridContent
     imagesData={{
      alt: "temp",
-     src: "/images/hero/temp_img_2.png",
+     src: "/images/hero/002.png",
      width: 500,
      height: 412,
     }}
@@ -140,7 +140,7 @@ export default function Page() {
    <div className='flex md:flex-row flex-col'>
     <SingleGridContent
      imagesData={{
-      src: "/images/hero/temp_img_2.png",
+      src: "/images/hero/001.png",
       alt: "Description of image",
       width: 600,
       height: 400,
@@ -154,7 +154,7 @@ export default function Page() {
     />
     <SingleGridContent
      imagesData={{
-      src: "/images/hero/temp_img_2.png",
+      src: "/images/hero/003.png",
       alt: "Description of image",
       width: 600,
       height: 400,

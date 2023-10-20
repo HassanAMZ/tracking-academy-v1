@@ -33,7 +33,6 @@ const BlogCard: React.FC<SingleBlogCardProps> = ({
    </div>
   </>
  );
- console.log();
  return (
   <React.Fragment>
    {post.draft ? (

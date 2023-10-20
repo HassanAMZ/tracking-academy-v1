@@ -2,12 +2,18 @@
 "use client";
 
 import { PostMetadata, PostMetadataProps } from "@/types/index";
-import { GTMBlogViewProps, GTMBlogListViewEventProps } from "@/types/index";
+import {
+ GTMBlogViewProps,
+ GTMBlogListViewEventProps,
+ GTMCourseListViewEventProps,
+} from "@/types/index";
 import React, { useEffect } from "react";
 import {
  initDataLayer,
- createItem,
- gtmCategories,
+ createItemFromBlog,
+ gtmCategoriesFromBlogs,
+ createItemFromCourses,
+ gtmCategoriesFromCourses,
 } from "@/components/utils/gtmAnalytics";
 import { useCalendlyEventListener } from "react-calendly";
 
@@ -51,7 +57,7 @@ const GTMBlogViewEvent: React.FC<GTMBlogViewProps> = ({ metadata }) => {
  useEffect(() => {
   initDataLayer(); // Use utility function
 
-  const item = createItem(metadata); // Use utility function
+  const item = createItemFromBlog(metadata); // Use utility function
 
   window.dataLayer.push({
    event: "gtm_custom_event",
@@ -72,7 +78,7 @@ const GTMBlogListViewEvent: React.FC<GTMBlogListViewEventProps> = ({
  useEffect(() => {
   initDataLayer();
 
-  const items = blogList.map((blog) => createItem(blog));
+  const items = blogList.map((blog) => createItemFromBlog(blog));
 
   window.dataLayer.push({
    event: "gtm_custom_event",
@@ -86,5 +92,30 @@ const GTMBlogListViewEvent: React.FC<GTMBlogListViewEventProps> = ({
 
  return <React.Fragment></React.Fragment>;
 };
+const GTMCourseListViewEvent: React.FC<GTMCourseListViewEventProps> = ({
+ courseList,
+}) => {
+ useEffect(() => {
+  initDataLayer();
 
-export { GTMBlogViewEvent, GTMBlogListViewEvent, GTMCalendlyEvent };
+  const items = courseList.map((course) => createItemFromCourses(course));
+
+  window.dataLayer.push({
+   event: "gtm_custom_event",
+   datalayer_event_name: "view_item_list",
+   event_id: Date.now(),
+   ecommerce: {
+    items,
+   },
+  });
+ }, [courseList]);
+
+ return <React.Fragment></React.Fragment>;
+};
+
+export {
+ GTMBlogViewEvent,
+ GTMBlogListViewEvent,
+ GTMCalendlyEvent,
+ GTMCourseListViewEvent,
+};
