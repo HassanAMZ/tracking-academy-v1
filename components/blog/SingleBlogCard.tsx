@@ -2,6 +2,7 @@ import React from "react";
 import {
  Heading3xl,
  Heading2xl,
+ Headingxl,
  Paragraphsm,
 } from "@/components/typography/Heading";
 import Link from "next/link";
@@ -19,9 +20,9 @@ const BlogCard: React.FC<SingleBlogCardProps> = ({
   <>
    <div className={`backgroundOverlay p-6`}>
     {isMain ? (
-     <Heading3xl className='line-clamp-2 py-2'>{post.title}</Heading3xl>
+     <Heading2xl className='line-clamp-2 py-2'>{post.title}</Heading2xl>
     ) : (
-     <Heading2xl className='line-clamp-2 '>{post.title}</Heading2xl>
+     <Headingxl className='line-clamp-2 '>{post.title}</Headingxl>
     )}
    </div>
 
