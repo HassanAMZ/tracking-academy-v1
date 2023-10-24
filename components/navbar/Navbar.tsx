@@ -12,7 +12,6 @@ export default function NavBar() {
     <div className='flex items-center justify-between w-full'>
      <DesktopNav />
      <MobileNav />
-     <ThemeSwitcher />
     </div>
    </header>
   </ContainerLayout>

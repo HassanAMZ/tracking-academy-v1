@@ -19,12 +19,13 @@ const BlogCard: React.FC<SingleBlogCardProps> = ({
  const renderContent = () => (
   <>
    {isMain ? (
-    <div className={`backgroundOverlay !bg-blue-500 p-6`}>
+    <div
+     className={`backgroundOverlay !bg-blue-500 text-white dark:text-gray-800 p-6`}>
      <Heading2xl className='line-clamp-2 py-2 '>{post.title}</Heading2xl>
     </div>
    ) : (
     <div
-     className={`backgroundOverlay p-6`}
+     className={`backgroundOverlay p-6 `}
      style={{ backgroundColor: generateBrightColor(0.05) }}>
      <Headingxl className='line-clamp-2 '>{post.title}</Headingxl>
     </div>
@@ -41,7 +42,7 @@ const BlogCard: React.FC<SingleBlogCardProps> = ({
  return (
   <React.Fragment>
    <div
-    className={` hover:border-2 hover:border-white rounded-md border-2 border-gray-700 shadow-md  ${
+    className={` hover:border-2 hover:dark:border-white hover:border-gray-800 rounded-md border-2 dark:border-gray-800 border-white shadow-md  ${
      isMain ? "hidden md:flex" : ""
     } ${className}`}>
     <Link href={`/${type}/${post.slug}`} className=''>

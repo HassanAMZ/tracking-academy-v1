@@ -2,6 +2,7 @@ import React from "react";
 import { Paragraphmd } from "@/components/typography/Heading";
 import headerNavLinks from "@/data/header-nav-links";
 import NavLink from "../navbar/NavLink";
+import { ThemeSwitcher } from "../theme/ThemeSwitcher";
 
 const Footer: React.FC = () => {
  return (
@@ -24,6 +25,7 @@ const Footer: React.FC = () => {
        {title}
       </NavLink>
      ))}
+     <ThemeSwitcher />
     </nav>
    </footer>
   </div>
