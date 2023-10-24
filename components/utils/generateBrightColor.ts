@@ -1,5 +1,5 @@
-function generateDarkColor(opacity: number = 1): string {
- const letters = "01234567"; // Using just the first 8 digits to get a darker color
+function generateBrightColor(opacity: number = 1): string {
+ const letters = "89ABCDEF"; // Using the last 8 digits to get a brighter color
  let color = "#";
  for (let i = 0; i < 6; i++) {
   color += letters[Math.floor(Math.random() * letters.length)];
@@ -13,4 +13,4 @@ function generateDarkColor(opacity: number = 1): string {
  return `rgba(${r}, ${g}, ${b}, ${opacity})`;
 }
 
-export default generateDarkColor;
+export default generateBrightColor;

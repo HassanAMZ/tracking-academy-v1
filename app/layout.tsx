@@ -10,6 +10,8 @@ import React from "react";
 import VercelAnalytics from "@/components/analytics/VercelAnalytics";
 import Footer from "@/components/footer/Footer";
 import ContainerLayout from "@/components/layouts/ContainerLayout";
+import { ThemeProvider } from "./context/ThemeContext";
+import { ThemeSwitcher } from "@/components/theme/ThemeSwitcher";
 
 const interVariableFont = localFont({
  src: "fonts/Inter/inter-font.ttf",
@@ -28,20 +30,22 @@ export default function RootLayout({ children }: { children: ReactNode }) {
  const isProduction = process.env.NEXT_PUBLIC_ENVIRONMENT === "production";
 
  return (
-  <html lang='en' className='dark'>
+  <html lang='en'>
    <body
-    className={`bg-gray-100 selection:bg-red-700 dark:bg-gray-800 text-gray-800 dark:text-white tracking-tighter max-w-5xl mx-auto text-base leading-tight ${interVariableFont.className}`}>
+    className={`bg-gray-100 selection:bg-red-700 dark:bg-gray-800 text-gray-800 dark:text-white tracking-tighter max-w-5xl mx-auto text-base leading-tight  ${interVariableFont.className}`}>
     {BgPolygon1}
-    <ContainerLayout>
-     <NavBar />
-    </ContainerLayout>
-    <PaypalContext>
-     <AuthContextProvider>{children}</AuthContextProvider>
-    </PaypalContext>
-    {BgPolygon2}
-    <ContainerLayout>
-     <Footer />
-    </ContainerLayout>
+    <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+     <ContainerLayout>
+      <NavBar />
+     </ContainerLayout>
+     <PaypalContext>
+      <AuthContextProvider>{children}</AuthContextProvider>
+     </PaypalContext>
+     {BgPolygon2}
+     <ContainerLayout>
+      <Footer />
+     </ContainerLayout>
+    </ThemeProvider>
     <GTMAnalytics />
     <VercelAnalytics />
    </body>

@@ -38,7 +38,7 @@ const HeroComponent: React.FC<HeroProps> = ({
        backgroundImage: `url('${images.background}')`,
       }}></div>
     )}
-    <div className='relative text-white z-10 flex flex-col justify-center items-start px-4 py-20 sm:px-8 md:px-14 '>
+    <div className='relativ z-10 flex flex-col justify-center items-start px-4 py-20 sm:px-8 md:px-14 '>
      <aside className='space-y-5 pb-6'>
       {images.group?.list && (
        <div className='flex flex-wrap items-center justify-start opacity-70'>
