@@ -15,15 +15,16 @@ import { GTMCourseListViewEvent } from "@/components/analytics/GTMEvents";
 
 export default async function Page() {
  const data = await getCoursesData();
- const sortedData = (await Promise.all(data)).sort((a, b) => {
-  const dateA = new Date(a.date);
-  const dateB = new Date(b.date);
-  return dateB.getTime() - dateA.getTime();
- });
+ const sortedData = (await Promise.all(data))
+  .filter((data) => data.draft === false)
+  .sort((a, b) => {
+   const dateA = new Date(a.date);
+   const dateB = new Date(b.date);
+   return dateB.getTime() - dateA.getTime();
+  });
+
  return (
   <div className='flex flex-col gap-2'>
-   {/* <GTMCourseListViewEvent courseList={sortedData} />
-   <CourseContainer rawData={data} data={sortedData} type='course' /> */}
    <React.Fragment>
     <HeroComponent
      textGroup={{
@@ -65,6 +66,12 @@ export default async function Page() {
      }}
     />
    </React.Fragment>
+   {sortedData.length > 0 && (
+    <React.Fragment>
+     <GTMCourseListViewEvent courseList={sortedData} />
+     <CourseContainer rawData={data} data={sortedData} type='courses' />
+    </React.Fragment>
+   )}
   </div>
  );
 }

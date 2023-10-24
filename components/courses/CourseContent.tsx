@@ -24,7 +24,7 @@ const CourseContent: React.FC<CourseContentProps> = ({
 
  return (
   <React.Fragment>
-   <SingleCourseCard isMain={true} course={mainCoursePost} type={"course"} />
+   {/* <SingleCourseCard isMain={true} course={mainCoursePost} type={type} /> */}
    <div className='grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-2'>
     {visibleCourseLinks}
    </div>
