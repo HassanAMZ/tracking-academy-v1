@@ -30,7 +30,7 @@ const HeroComponent: React.FC<HeroProps> = ({
 
  return (
   <ContainerLayout>
-   <section className='relative rounded-md flex flex-col  items-center justify-center'>
+   <section className='relative rounded-md flex flex-col shadow-md items-center justify-center'>
     {images.background && (
      <div
       className='dark:bg-gray-800 bg-gray-400 rounded-md absolute top-0 bottom-0 left-0 dark:opacity-40 opacity-50 right-0 bg-cover z-0'

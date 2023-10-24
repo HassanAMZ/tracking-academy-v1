@@ -34,13 +34,13 @@ const BlogSearch: React.FC<BlogSearchProps> = ({ data, onSearch }) => {
 
  console.log(data[0]);
  return (
-  <div className='flex flex-col gap-2'>
+  <div className='flex flex-col'>
    <input
     type='text'
     placeholder='Search for a post...'
     value={searchTerm}
     onChange={(e) => setSearchTerm(e.target.value)}
-    className='p-2 border-2 border-gray-800 dark:border-white rounded-md mb-2 text-gray-800 bg-transparent'
+    className='p-2 border-2 border-gray-800 dark:border-white rounded-md text-gray-800 bg-transparent'
    />
   </div>
  );

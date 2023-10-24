@@ -39,3 +39,21 @@ li {
 .textOpacity80 {
  @apply dark:text-white/80 text-gray-900/80;
 }
+
+/* Default Scrollbar Style */
+::-webkit-scrollbar {
+ width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+ @apply rounded bg-purple-600;
+}
+
+::-webkit-scrollbar-track {
+ @apply bg-transparent;
+}
+
+/* Dark Mode Scrollbar Style */
+.dark ::-webkit-scrollbar-thumb {
+ @apply bg-red-600;
+}
