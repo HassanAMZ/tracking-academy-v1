@@ -25,7 +25,7 @@ const AuthenticatedLayout: React.FC<AuthenticatedLayoutProps> = ({
  }, [user]);
 
  return (
-  <BlogLayout>
+  <React.Fragment>
    {loading ? (
     <FirebaseAuthSkeleton />
    ) : user ? (
@@ -40,7 +40,7 @@ const AuthenticatedLayout: React.FC<AuthenticatedLayoutProps> = ({
      <FirebaseAuth />
     </React.Fragment>
    )}
-  </BlogLayout>
+  </React.Fragment>
  );
 };
 

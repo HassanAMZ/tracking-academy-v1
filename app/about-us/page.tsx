@@ -29,9 +29,9 @@ export default function Page() {
 
    <LearnMoreHeader
     headingTexts={{
-     heading: "Hey, I'm Hassan 👋 ",
+     heading: "Welcome Analysts 👋 ",
      subHeading:
-      "I'm a Top Rated Freelancer on Upwork, here's what you should know about me.",
+      "Hey, I'm Hassan, and I'm a Top Rated Freelancer on Upwork, here's what you should know about me.",
     }}
     colorDetails={{ primary: baseColors.aboutUs.primary }}
    />
